@@ -11,47 +11,47 @@ int snakeX, snakeY, fruitX, fruitY, score;
 enum direction { STOP = 0, LEFT, RIGHT, UP, DOWN };
 direction dir;
 
-class Renderer {
-public:
-  virtual void RenderSnake(int x, int y) = 0;
-  virtual void RenderFruit(int x, int y) = 0;
-  virtual void RenderBoard(int width, int height) = 0;
-  virtual ~Renderer()
-  {
-  }
-};
+// class Renderer {
+// public:
+//   virtual void RenderSnake(int x, int y) = 0;
+//   virtual void RenderFruit(int x, int y) = 0;
+//   virtual void RenderBoard(int width, int height) = 0;
+//   virtual ~Renderer()
+//   {
+//   }
+// };
 
-class TextRenderer: public Renderer {
-public:
-  void RenderSnake(int x, int y) override
-  {
-    // Fill in the text-based rendering code
-  }
-  void RenderFruit(int x, int y) override
-  {
-    // Fill in the text-based rendering code
-  }
-  void RenderBoard(int width, int height) override
-  {
-    // Fill in the text-based rendering code
-  }
-};
+// class TextRenderer: public Renderer {
+// public:
+//   void RenderSnake(int x, int y) override
+//   {
+//     // Fill in the text-based rendering code
+//   }
+//   void RenderFruit(int x, int y) override
+//   {
+//     // Fill in the text-based rendering code
+//   }
+//   void RenderBoard(int width, int height) override
+//   {
+//     // Fill in the text-based rendering code
+//   }
+// };
 
-class ImageRenderer: public Renderer {
-public:
-  void RenderSnake(int x, int y) override
-  {
-    // Fill in the image-based rendering code
-  }
-  void RenderFruit(int x, int y) override
-  {
-    // Fill in the image-based rendering code
-  }
-  void RenderBoard(int width, int height) override
-  {
-    // Fill in the image-based rendering code
-  }
-};
+// class ImageRenderer: public Renderer {
+// public:
+//   void RenderSnake(int x, int y) override
+//   {
+//     // Fill in the image-based rendering code
+//   }
+//   void RenderFruit(int x, int y) override
+//   {
+//     // Fill in the image-based rendering code
+//   }
+//   void RenderBoard(int width, int height) override
+//   {
+//     // Fill in the image-based rendering code
+//   }
+// };
 
 void Setup()
 {
@@ -67,7 +67,7 @@ void Setup()
 void Draw()
 {
   system("cls");
-  for (int i = 0; i < width; i++)
+  for (int i = 0; i < width + 2; i++)
     cout << "#";
 
   cout << endl;
@@ -82,7 +82,7 @@ void Draw()
     cout << endl;
   }
 
-  for (int i = 0; i < width; i++)
+  for (int i = 0; i < width + 2; i++)
     cout << "#";
   cout << endl;
 }
