@@ -51,10 +51,47 @@ void Draw()
 
 void Input()
 {
+  if (_kbhit()) // check if key board keey is pressed
+  {
+    switch (_getch()) // returns the ASCII value of the character pressed
+    {
+    case 'a':
+      dir = LEFT;
+      break;
+    case 'w':
+      dir = UP;
+      break;
+    case 'd':
+      dir = RIGHT;
+      break;
+    case 's':
+      dir = DOWN;
+      break;
+    case 'x':
+      gameOver = true;
+      break;
+    }
+  }
 }
 
 void Logic()
 {
+  switch (dir) {
+  case LEFT:
+    snakeHeadX--;
+    break;
+  case UP:
+    snakeHeadY++;
+    break;
+  case RIGHT:
+    snakeHeadX++;
+    break;
+  case DOWN:
+    snakeHeadY--;
+    break;
+  default:
+    break;
+  }
 }
 
 int main()
