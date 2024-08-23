@@ -67,7 +67,7 @@ void Setup()
 void Draw()
 {
   system("cls");
-  for (int i = 0; i < width + 2; i++)
+  for (int i = 0; i < width + 1; i++)
     cout << "#";
 
   cout << endl;
@@ -82,7 +82,7 @@ void Draw()
     cout << endl;
   }
 
-  for (int i = 0; i < width + 2; i++)
+  for (int i = 0; i < width + 1; i++)
     cout << "#";
   cout << endl;
 }
