@@ -79,7 +79,7 @@ void Draw()
       if (i == snakeHeadY && j == snakeHeadX)
         cout << "O";
       else if (i == fruitY && j == fruitX)
-        cout << "O";
+        cout << "F";
       else
         cout << " ";
     }
