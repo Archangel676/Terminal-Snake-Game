@@ -81,13 +81,13 @@ void Logic()
     snakeHeadX--;
     break;
   case UP:
-    snakeHeadY++;
+    snakeHeadY--;
     break;
   case RIGHT:
     snakeHeadX++;
     break;
   case DOWN:
-    snakeHeadY--;
+    snakeHeadY++;
     break;
   default:
     break;
@@ -101,7 +101,7 @@ int main()
     Draw();
     Input();
     Logic();
-    Sleep(1000);
+    Sleep(10);
   }
 
   return 0;
