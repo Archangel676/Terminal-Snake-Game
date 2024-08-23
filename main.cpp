@@ -7,7 +7,7 @@ using namespace std;
 bool gameOver;
 const int width = 20;
 const int height = 20;
-int snakeX, snakeY, fruitX, fruitY, score;
+int snakeHeadX, snakeHeadY, fruitX, fruitY, score;
 enum direction { STOP = 0, LEFT, RIGHT, UP, DOWN };
 direction dir;
 
@@ -57,8 +57,8 @@ void Setup()
 {
   gameOver = false;
   dir = STOP;
-  snakeX = width / 2;
-  snakeY = height / 2;
+  snakeHeadX = width / 2;
+  snakeHeadY = height / 2;
   fruitX = rand() % width;
   fruitY = rand() % height;
   score = 0;
@@ -76,8 +76,12 @@ void Draw()
     for (int j = 0; j < width; j++) {
       if (j == 0 || j == width - 1)
         cout << "#";
-
-      cout << " ";
+      if (i == snakeHeadY && j == snakeHeadX)
+        cout << "O";
+      else if (i == fruitY && j == fruitX)
+        cout << "O";
+      else
+        cout << " ";
     }
     cout << endl;
   }
@@ -121,7 +125,7 @@ int main()
 //     // Create and draw your snake and fruit using SFML Sprites or Shapes
 //     sf::RectangleShape snakeHead(sf::Vector2f(20, 20));
 //     snakeHead.setFillColor(sf::Color::Green);
-//     snakeHead.setPosition(snakeX * 20, snakeY * 20);
+//     snakeHead.setPosition(snakeHeadX * 20, snakeHeadY * 20);
 //     window.draw(snakeHead);
 
 //     // Continue drawing other game elements...
