@@ -96,6 +96,12 @@ void Logic()
   if (snakeHeadX >= (width - 1) || snakeHeadX < 0 || snakeHeadY >= height
       || snakeHeadY < 0)
     gameOver = true;
+
+  if (snakeHeadX == fruitX && snakeHeadY == fruitY) {
+    score += 10;
+    fruitX = rand() % width;
+    fruitY = rand() % height;
+  }
 }
 
 int main()
