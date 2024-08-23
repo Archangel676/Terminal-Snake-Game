@@ -48,12 +48,12 @@ void Draw()
     cout << "#";
   cout << endl << endl;
 
-  cout << "Your score is: " << score << endl;
+  cout << "Your score is: " << score << endl << endl;
 }
 
 void Input()
 {
-  if (_kbhit()) // check if key board keey is pressed
+  if (_kbhit()) // check if a key board key is pressed
   {
     switch (_getch()) // returns the ASCII value of the character pressed
     {
