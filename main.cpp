@@ -92,6 +92,10 @@ void Logic()
   default:
     break;
   }
+
+  if (snakeHeadX > width || snakeHeadX < 0 || snakeHeadY > height
+      || snakeHeadY < 0)
+    gameOver = true;
 }
 
 int main()
