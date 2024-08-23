@@ -107,3 +107,47 @@ int main()
 
   return 0;
 }
+
+// Implement a Simple Rendering Engine with a Graphics Library:
+//  Include SFML Graphics Library
+//  #include <SFML/Graphics.hpp>
+
+// // Your Snake Game Logic here...
+
+// void Render(sf::RenderWindow &window) {
+//     // Clear the window with a background color
+//     window.clear(sf::Color::Black);
+
+//     // Create and draw your snake and fruit using SFML Sprites or Shapes
+//     sf::RectangleShape snakeHead(sf::Vector2f(20, 20));
+//     snakeHead.setFillColor(sf::Color::Green);
+//     snakeHead.setPosition(snakeX * 20, snakeY * 20);
+//     window.draw(snakeHead);
+
+//     // Continue drawing other game elements...
+
+//     // Display everything on the screen
+//     window.display();
+// }
+
+// int main() {
+//     sf::RenderWindow window(sf::VideoMode(400, 400), "Snake Game");
+//     Setup();
+//     while (window.isOpen() && !gameOver) {
+//         // Handle window events (keyboard, etc.)
+//         sf::Event event;
+//         while (window.pollEvent(event)) {
+//             if (event.type == sf::Event::Closed)
+//                 window.close();
+//         }
+
+//         // Game Logic
+//         Input();
+//         Logic();
+
+//         // Render
+//         Render(window);
+//     }
+
+//     return 0;
+// }
