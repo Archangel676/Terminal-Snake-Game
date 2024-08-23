@@ -1,4 +1,6 @@
+#include <conio.h> // For _kbhit() and _getch()
 #include <iostream>
+#include <windows.h> // For Windows-specific functions
 using namespace std;
 
 bool gameOver;
