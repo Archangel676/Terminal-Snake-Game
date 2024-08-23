@@ -93,8 +93,8 @@ void Logic()
     break;
   }
 
-  if (snakeHeadX > width || snakeHeadX < 0 || snakeHeadY > height
-      || snakeHeadY < 0)
+  if (snakeHeadX >= width || snakeHeadX <= 0 || snakeHeadY >= height
+      || snakeHeadY <= 0)
     gameOver = true;
 }
 
