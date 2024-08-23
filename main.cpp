@@ -29,10 +29,12 @@ void Draw()
 
   for (int i = 0; i < height; i++) {
     for (int j = 0; j < width; j++) {
-      if (j == 0 || j == width - 1)
+      if (j == 0)
         cout << "#";
       else
         cout << " ";
+      if (j == width - 1)
+        cout << "#";
     }
     cout << endl;
   }
