@@ -129,7 +129,7 @@ void Logic()
   if (headX >= width - 1)
     headX = 0;
   else if (headX < 0)
-    headX = width - 1;
+    headX = width - 2;
 
   if (headY >= height)
     headY = 0;
