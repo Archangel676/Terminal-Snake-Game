@@ -121,18 +121,20 @@ void Logic()
     break;
   }
 
-  if (headX >= (width - 1) || headX < 0 || headY >= height || headY < 0)
-    gameOver = true;
+  // //Classic Mode: You die if you hit the wall
+  //   if (headX >= (width - 1) || headX < 0 || headY >= height || headY < 0)
+  //     gameOver = true;
 
-  // if (headX >= width)
-  //   headX = 0;
-  // else if (headX < 0)
-  //   headX = width - 1;
+  // Easy Mode: You come out the opposite wall if you hit the wall
+  if (headX >= width)
+    headX = 0;
+  else if (headX < 0)
+    headX = width - 1;
 
-  // if (headY >= height)
-  //   headY = 0;
-  // else if (headY < 0)
-  //   headY = height - 1;
+  if (headY >= height)
+    headY = 0;
+  else if (headY < 0)
+    headY = height - 1;
 
   for (int i = 0; i < nTail; i++) {
     if (tailX[i] == headX && tailY[i] == headY)
