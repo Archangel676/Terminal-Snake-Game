@@ -126,7 +126,7 @@ void Logic()
   //     gameOver = true;
 
   // Easy Mode: You come out the opposite wall if you hit the wall
-  if (headX >= width)
+  if (headX >= width - 1)
     headX = 0;
   else if (headX < 0)
     headX = width - 1;
