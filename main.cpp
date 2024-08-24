@@ -124,6 +124,11 @@ void Logic()
   if (headX >= (width - 1) || headX < 0 || headY >= height || headY < 0)
     gameOver = true;
 
+  for (int i = 0; i < nTail; i++) {
+    if (tailX[i] == headX && tailY[i] == headY)
+      gameOver = true;
+  }
+
   if (headX == fruitX && headY == fruitY) {
     score += 10;
     fruitX = rand() % width;
