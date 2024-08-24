@@ -7,7 +7,9 @@ using namespace std;
 bool gameOver;
 const int width = 20;
 const int height = 20;
-int snakeHeadX, snakeHeadY, fruitX, fruitY, score;
+int headX, headY, fruitX, fruitY, score;
+int tailX[100], tailY[100];
+int nTail;
 enum direction { STOP = 0, LEFT, RIGHT, UP, DOWN };
 direction dir;
 
@@ -15,8 +17,8 @@ void Setup()
 {
   gameOver = false;
   dir = STOP;
-  snakeHeadX = width / 2;
-  snakeHeadY = height / 2;
+  headX = width / 2;
+  headY = height / 2;
   fruitX = rand() % width;
   fruitY = rand() % height;
   score = 0;
@@ -34,12 +36,17 @@ void Draw()
     for (int j = 0; j < width; j++) {
       if (j == 0 || j == width - 1)
         cout << "#";
-      if (i == snakeHeadY && j == snakeHeadX)
+      if (i == headY && j == headX)
         cout << "O";
       else if (i == fruitY && j == fruitX)
         cout << "F";
-      else
+      else {
+        for (int k = 0; k < nTail; k++) {
+          if (tailX[k] == j && tailY[k] == i)
+            cout << "o";
+        }
         cout << " ";
+      }
     }
     cout << endl;
   }
@@ -78,31 +85,44 @@ void Input()
 
 void Logic()
 {
+  int prevX = tailX[0];
+  int prevY = tailY[0];
+  int prev2X, prev2Y;
+
+  for (int i = 1; i < nTail; i++) {
+    prev2X = tailX[i];
+    prev2Y = tailY[i];
+    tailX[i] = prevX;
+    tailX[i] = prevY;
+    prevX = prev2X;
+    prevY = prev2Y;
+  }
+
   switch (dir) {
   case LEFT:
-    snakeHeadX--;
+    headX--;
     break;
   case UP:
-    snakeHeadY--;
+    headY--;
     break;
   case RIGHT:
-    snakeHeadX++;
+    headX++;
     break;
   case DOWN:
-    snakeHeadY++;
+    headY++;
     break;
   default:
     break;
   }
 
-  if (snakeHeadX >= (width - 1) || snakeHeadX < 0 || snakeHeadY >= height
-      || snakeHeadY < 0)
+  if (headX >= (width - 1) || headX < 0 || headY >= height || headY < 0)
     gameOver = true;
 
-  if (snakeHeadX == fruitX && snakeHeadY == fruitY) {
+  if (headX == fruitX && headY == fruitY) {
     score += 10;
     fruitX = rand() % width;
     fruitY = rand() % height;
+    nTail++;
   }
 }
 
@@ -132,7 +152,7 @@ int main()
 //     // Create and draw your snake and fruit using SFML Sprites or Shapes
 //     sf::RectangleShape snakeHead(sf::Vector2f(20, 20));
 //     snakeHead.setFillColor(sf::Color::Green);
-//     snakeHead.setPosition(snakeHeadX * 20, snakeHeadY * 20);
+//     snakeHead.setPosition(headX * 20, headY * 20);
 //     window.draw(snakeHead);
 
 //     // Continue drawing other game elements...
