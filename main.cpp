@@ -47,9 +47,9 @@ void Draw()
             cout << "o";
             printed = true;
           }
-          if (!printed)
-            cout << " ";
         }
+        if (!printed)
+          cout << " ";
       }
     }
     cout << endl;
