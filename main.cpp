@@ -42,10 +42,14 @@ void Draw()
         cout << "F";
       else {
         for (int k = 0; k < nTail; k++) {
-          if (tailX[k] == j && tailY[k] == i)
+          bool printed = false;
+          if (tailX[k] == j && tailY[k] == i) {
             cout << "o";
+            printed = false;
+          }
+          if (!printed)
+            cout << " ";
         }
-        cout << " ";
       }
     }
     cout << endl;
