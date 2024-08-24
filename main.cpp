@@ -45,7 +45,7 @@ void Draw()
           bool printed = false;
           if (tailX[k] == j && tailY[k] == i) {
             cout << "o";
-            printed = false;
+            printed = true;
           }
           if (!printed)
             cout << " ";
@@ -97,7 +97,7 @@ void Logic()
     prev2X = tailX[i];
     prev2Y = tailY[i];
     tailX[i] = prevX;
-    tailX[i] = prevY;
+    tailY[i] = prevY;
     prevX = prev2X;
     prevY = prev2Y;
   }
@@ -137,7 +137,7 @@ int main()
     Draw();
     Input();
     Logic();
-    Sleep(100);
+    Sleep(100); // Sleep for 100 milliseconds to control the game speed
   }
 
   return 0;
