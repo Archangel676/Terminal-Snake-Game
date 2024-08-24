@@ -100,6 +100,8 @@ void Logic()
     tailY[i] = prevY;
     prevX = prev2X;
     prevY = prev2Y;
+    tailX[0] = headX;
+    tailY[0] = headY;
   }
 
   switch (dir) {
