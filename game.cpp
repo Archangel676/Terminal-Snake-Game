@@ -17,7 +17,11 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
     std::cerr << "Error loading the snake corner image";
   }
 
-  if (!snakeTailTexture.loadFromFile("assets/images/fruit_apple.png")) {
+  if (!snakeTailTexture.loadFromFile("assets/images/snake_tail.png")) {
+    std::cerr << "Error loading the snake tail image";
+  }
+
+  if (!fruitTexture.loadFromFile("assets/images/fruit_apple.png")) {
     std::cerr << "Error loading the fruit image";
   }
 
@@ -26,19 +30,5 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
   snakeBodySprite.setTexture(snakeBodyTexture);
   snakeCornerSprite.setTexture(snakeCornerTexture);
   snakeTailSprite.setTexture(snakeTailTexture);
-  fruitSprite;
+  fruitSprite.setTexture(fruitTexture);
 }
-
-// sf::RenderWindow window {}
-
-// sf::Texture snakeHeadTexture {}
-// sf::Texture snakeBodyTexture {}
-// sf::Texture snakeCornerTexture {}
-// sf::Texture snakeTailTexture {}
-// sf::Texture fruitTexture {}
-
-// sf::Sprite snakeHeadSprite {}
-// sf::Sprite snakeBodySprite {}
-// sf::Sprite snakeCornerSprite {}
-// sf::Sprite snakeTailSprite {}
-// sf::Sprite fruitSprite {}
