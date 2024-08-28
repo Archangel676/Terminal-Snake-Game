@@ -165,9 +165,19 @@ int main()
   return 0;
 }
 
+// Creating texture objects
+sf::Texture snakeTexture;
+sf::Texture fruitTexture;
+
+// Load textures from files
+if (!snakeTexture.loadFromFile("path/to/snake.png")) {
+  // Handle error
+}
+if (!foodTexture.loadFromFile("path/to/food.png")) {
+  // Handle error
+}
+
 // Implement a Simple Rendering Engine with a Graphics Library:
-//  Include SFML Graphics Library
-//  #include <SFML/Graphics.hpp>
 
 // // Your Snake Game Logic here...
 
