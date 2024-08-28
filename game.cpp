@@ -32,3 +32,23 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
   snakeTailSprite.setTexture(snakeTailTexture);
   fruitSprite.setTexture(fruitTexture);
 }
+
+void Game::run()
+{
+  while (window.isOpen()) {
+    sf::Event event;
+    while (window.pollEvent(event)) {
+      if (event.type == sf::Event::Closed)
+        window.close();
+    }
+
+    window.clear();
+
+    // Draw out my Sprites
+
+    window.draw(snakeHeadSprite);
+    window.draw(snakeBodySprite);
+    window.draw(snakeCornerSprite);
+    window.draw(snakeTailSprite);
+  }
+}
