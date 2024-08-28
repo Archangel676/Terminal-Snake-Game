@@ -1,29 +1,30 @@
-# Makefile for SFML with MinGW
-
 # Compiler
-CXX := g++
-CXXFLAGS := -std=c++17 -I "C:/Users/mayav/Documents/Snake Game/External/SFML/include"  # Added my path to SFML include
+CXX = g++
+CXXFLAGS = -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
 
-# Linker
-LDFLAGS := -L "C:/Users/mayav/Documents/Snake Game/External/SFML/lib" -lsfml-graphics -lsfml-window -lsfml-system
+# SFML paths
+SFML_INCLUDE = C:/Users/mayav/Documents/Snake Game/External/SFML/include
+SFML_LIB = C:/Users/mayav/Documents/Snake Game/External/SFML/lib
 
-# Target
-TARGET := program.exe
+# Add SFML include path to compiler flags
+CXXFLAGS += -I$(SFML_INCLUDE)
 
-# Source files
-SRCS := $(wildcard *.cpp)
+# SFML libraries to link
+LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
 
-# Object files
-OBJS := $(SRCS:.cpp=.o)
+# List .h files here
+HEADERS =
 
-# Build rules
-all: $(TARGET)
+# List .cpp files here
+PROGRAM_FILES = main.cpp
 
-$(TARGET): $(OBJS)
-	$(CXX) $(OBJS) -o $@ $(LDFLAGS)  # <--- Make sure this line starts with a tab
+.PHONY: all
+all: program.exe
 
-%.o: %.cpp
-	$(CXX) -c $< -o $@ $(CXXFLAGS)  # <--- Make sure this line starts with a tab
+program.exe: $(PROGRAM_FILES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
 
+.PHONY: clean
 clean:
-	del $(OBJS) $(TARGET)  # <--- Make sure this line starts with a tab (for Windows)
+	del program.exe
+	del *.o
