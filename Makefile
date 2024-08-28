@@ -1,10 +1,4 @@
-# # Compiler
-# CXX = g++
-# CXXFLAGS = -g -Wall -Wextra
-# CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
-# CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
-
-all: complie link
+all: compile link
 
 compile: 
 	g++ main.cpp -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
@@ -14,6 +8,7 @@ link:
 
 clean: 
 	rm -f program *.o
+
 
 #example Readme.md file for github
 # Snake Game
@@ -34,6 +29,13 @@ clean:
 
 
 # OLD makefile:
+
+# Compiler
+# CXX = g++
+# CXXFLAGS = -g -Wall -Wextra
+# CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
+# CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+
 # # List .h files here
 # HEADERS =
 
