@@ -1,11 +1,7 @@
-#include <SFML/Graphics.hpp>
-#include <conio.h> // For _kbhit() and _getch()
-#include <iostream>
-#include <windows.h> // For Sleep function
-// g++ -c main.cpp -I"C:\Users\mayav\Documents\Snake
-// Game\External\SFML\include"-DSFML_STATIC g++ main.o -o program
-// -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s
-// -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm
+// #include <SFML/Graphics.hpp>
+// #include <conio.h> // For _kbhit() and _getch()
+// #include <iostream>
+// #include <windows.h> // For Sleep function
 
 using namespace std;
 
