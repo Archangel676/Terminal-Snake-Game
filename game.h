@@ -31,8 +31,8 @@ private:
 
   sf::Sprite snakeHeadSprite;
   sf::Sprite snakeBodySprite;
-  sf::Sprite snakeCornerTexture;
-  sf::Sprite snakeTailTexture;
+  sf::Sprite snakeCornerSprite;
+  sf::Sprite snakeTailSprite;
   sf::Sprite fruitSprite;
 };
 
