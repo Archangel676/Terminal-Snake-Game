@@ -1,20 +1,29 @@
-# compiler options
-CXXFLAGS = -g -Wall -Wextra
-CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
-CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+# Makefile for SFML with MinGW
 
-# list .h files here
-HEADERS =
+# Compiler
+CXX := g++
+CXXFLAGS := -std=c++17 -I"C:/SFML/include"  # Add path to SFML include
 
-# list .cpp files here
-PROGRAM_FILES = main.cpp
+# Linker
+LDFLAGS := -L"C:/SFML/lib" -lsfml-graphics -lsfml-window -lsfml-system
 
-.PHONY: all
-all: program.exe
+# Target
+TARGET := program.exe
 
-program.exe: $(PROGRAM_FILES) $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@
+# Source files
+SRCS := $(wildcard *.cpp)
 
-.PHONY: clean
+# Object files
+OBJS := $(SRCS:.cpp=.o)
+
+# Build rules
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+    $(CXX) $(OBJS) -o $@ $(LDFLAGS)
+
+%.o: %.cpp
+    $(CXX) -c $< -o $@ $(CXXFLAGS)
+
 clean:
-	rm -f program.exe
+    del $(OBJS) $(TARGET)  # Command for Windows
