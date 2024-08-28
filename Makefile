@@ -22,6 +22,9 @@ clean:
 # ## Attribution
 
 # The code and assets used in this project are not original and are based on publicly available resources. The purpose of this project is to practice and understand game development concepts.
+#Assets are mine tho
+#BoostMyTool - SFML Setup in Visual Studio Code | Create C/C++ Applications using SFML + VSCode + MinGW-w64
+#C++ snake tutorial guy
 
 # ## License
 
