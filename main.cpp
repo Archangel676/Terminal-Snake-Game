@@ -153,17 +153,24 @@ void Logic()
   }
 }
 
+// int main()
+// {
+//   Setup();
+//   while (!gameOver) {
+//     Draw();
+//     Input();
+//     Logic();
+//     Sleep(100); // Sleep for 100 milliseconds to control the game speed
+//   }
+//   cout << endl;
+
+//   return 0;
+// }
+
 int main()
 {
-  Setup();
-  while (!gameOver) {
-    Draw();
-    Input();
-    Logic();
-    Sleep(100); // Sleep for 100 milliseconds to control the game speed
-  }
-  cout << endl;
-
+  Game game;
+  game.run();
   return 0;
 }
 
