@@ -27,4 +27,3 @@ program.exe: $(PROGRAM_FILES) $(HEADERS)
 .PHONY: clean
 clean:
 	del program.exe
-	del *.o
