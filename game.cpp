@@ -23,15 +23,10 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 
   // Loading all my sprites
   snakeHeadSprite.setTexture(snakeHeadTexture);
-  snakeBodySprite snakeCornerSprite
-  {
-  }
-  snakeTailSprite
-  {
-  }
-  fruitSprite
-  {
-  }
+  snakeBodySprite;
+  snakeCornerSprite;
+  snakeTailSprite;
+  fruitSprite;
 }
 
 // sf::RenderWindow window {}
