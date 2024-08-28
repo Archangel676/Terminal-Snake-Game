@@ -1,4 +1,3 @@
-#include "game.cpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <conio.h> // For _kbhit() and _getch()
