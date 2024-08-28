@@ -34,4 +34,4 @@ program.exe: $(PROGRAM_FILES) $(HEADERS)
 
 .PHONY: clean
 clean:
-	rm -f program.exe *.o
+	rm -f program.exe
