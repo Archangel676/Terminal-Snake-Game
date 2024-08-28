@@ -23,9 +23,9 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 
   // Loading all my sprites
   snakeHeadSprite.setTexture(snakeHeadTexture);
-  snakeBodySprite;
-  snakeCornerSprite;
-  snakeTailSprite;
+  snakeBodySprite.setTexture(snakeBodyTexture);
+  snakeCornerSprite.setTexture(snakeCornerTexture);
+  snakeTailSprite.setTexture(snakeTailTexture);
   fruitSprite;
 }
 
