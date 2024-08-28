@@ -3,6 +3,7 @@
 
 Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 {
+  // Loading all my textures
   if (!snakeHeadTexture.loadFromFile("assets/images/snake_head.png")) {
     std::cerr << "Error loading the snake head image";
   }
@@ -18,6 +19,18 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 
   if (!snakeTailTexture.loadFromFile("assets/images/fruit_apple.png")) {
     std::cerr << "Error loading the fruit image";
+  }
+
+  // Loading all my sprites
+  snakeHeadSprite.setTexture(snakeHeadTexture);
+  snakeBodySprite snakeCornerSprite
+  {
+  }
+  snakeTailSprite
+  {
+  }
+  fruitSprite
+  {
   }
 }
 
