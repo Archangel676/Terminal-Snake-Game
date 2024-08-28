@@ -2,7 +2,7 @@
 
 # Compiler
 CXX := g++
-CXXFLAGS := -std=c++17 -I"C:\Users\mayav\Documents\Snake Game\External\SFML\include"  # Added my path to SFML include
+CXXFLAGS := -std=c++17 -I"C:/SFML/include"  # Add path to SFML include
 
 # Linker
 LDFLAGS := -L"C:/SFML/lib" -lsfml-graphics -lsfml-window -lsfml-system
@@ -20,10 +20,10 @@ OBJS := $(SRCS:.cpp=.o)
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-    $(CXX) $(OBJS) -o $@ $(LDFLAGS)
+	$(CXX) $(OBJS) -o $@ $(LDFLAGS)  # <--- Make sure this line starts with a tab
 
 %.o: %.cpp
-    $(CXX) -c $< -o $@ $(CXXFLAGS)
+	$(CXX) -c $< -o $@ $(CXXFLAGS)  # <--- Make sure this line starts with a tab
 
 clean:
-    del $(OBJS) $(TARGET)  # Command for Windows
+	del $(OBJS) $(TARGET)  # <--- Make sure this line starts with a tab (for Windows)
