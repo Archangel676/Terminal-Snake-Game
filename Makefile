@@ -19,7 +19,7 @@ program.exe: $(PROGRAM_FILES) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
 
 clean:
-	rm -f program.exe
+	rm -f *.exe
 	rm -f *.o
 
 
