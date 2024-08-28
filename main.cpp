@@ -1,4 +1,3 @@
-#include <SFML/Graphics.hpp>
 #include <conio.h> // For _kbhit() and _getch()
 #include <iostream>
 #include <windows.h> // For Sleep function
