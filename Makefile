@@ -28,7 +28,7 @@ LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
 .PHONY: all
 all: program.exe
 
-program.exe: $(PROGRAM_FILES) $(HEADERS) $(SFML_INCLUDE) $(SFML_LIB)
+program.exe: $(PROGRAM_FILES) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
 
 .PHONY: clean
