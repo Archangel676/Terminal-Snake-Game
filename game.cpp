@@ -50,5 +50,8 @@ void Game::run()
     window.draw(snakeBodySprite);
     window.draw(snakeCornerSprite);
     window.draw(snakeTailSprite);
+    window.draw(fruitSprite);
+
+    window.display();
   }
 }
