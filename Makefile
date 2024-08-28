@@ -21,7 +21,7 @@ SFML_LIB = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/lib"
 CXXFLAGS += -I$(SFML_INCLUDE)
 
 # SFML libraries to link
-LDFLAGS = program.o -o program -L$(SFML_LIB) -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main
+LDFLAGS = program.o -o program -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
 
 # Bottom of section added to support SFML library  
 
