@@ -3,6 +3,7 @@
 
 Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 {
+  if (!anakeHeadTexture.loadFromFile("Assets/images/nake UP.png"))
 }
 
 // sf::RenderWindow window {}
