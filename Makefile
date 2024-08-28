@@ -15,8 +15,8 @@ program.exe: $(PROGRAM_FILES) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
 
 clean:
-	del program.exe
-	del src/*.o
+	rm -f program.exe
+	rm -f *.o
 
 
 #THE ONE THAT WORKED
