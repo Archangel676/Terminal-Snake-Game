@@ -15,6 +15,24 @@ link:
 clean: 
 	rm -f program *.o
 
+#example Readme.md file for github
+# Snake Game
+
+# This repository contains a simple Snake game created for educational purposes. 
+
+# ## About
+
+# This project was developed to practice game development techniques and to learn more about programming and game design. The code is based on various tutorials and resources available online.
+
+# ## Attribution
+
+# The code and assets used in this project are not original and are based on publicly available resources. The purpose of this project is to practice and understand game development concepts.
+
+# ## License
+
+# This project is provided for educational purposes only and is not intended for commercial use. Feel free to use or modify it for your personal learning.
+
+
 # OLD makefile:
 # # List .h files here
 # HEADERS =
