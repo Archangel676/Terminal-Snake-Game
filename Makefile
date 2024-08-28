@@ -14,7 +14,7 @@ PROGRAM_FILES = main.cpp
 # Top of section added to support SFML library  
 
 # SFML paths
-SFML_INCLUDE = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/include" -DSFML_STATIC
+SFML_INCLUDE = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/include"
 SFML_LIB = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/lib"
 
 # Add SFML include path to compiler flags
