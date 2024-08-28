@@ -1,27 +1,28 @@
 #ifndef GAME_H
 #define GAME_H
 
-class TicTacToe {
-private:
-  // char currentPlayer;
-  // char board[3][3];
+#include <SFML/Graphics.hpp>
 
+class Game {
 public:
   /**
-   * @brief Constructs a new Tic Tac Toe object.
+   * @brief EXAMPLE: Constructs a new Tic Tac Toe object.
    *        Sets default starting player to X and
    *        initializes board with dash '-' characters
-
-  TicTacToe();*/
+   */
+  Game();
 
   /**
-   * @brief Loops through the two dimensional array
+   * @brief EXAMPLE: Loops through the two dimensional array
    *        of the current board and turns it into a string
    *        that if printed to the console, will be formatted
    *        like a regular Tic Tac Toe game
-   * @return std::string String containing current game log
+   */
+  void run();
 
-  std::string toString(); */
+private:
+  // char currentPlayer;
+  // char board[3][3];
 };
 
 #endif // GAME_H
