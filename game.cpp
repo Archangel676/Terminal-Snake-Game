@@ -1,6 +1,10 @@
 #include "game.h"
 #include <iostream>
 
+Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
+{
+}
+
 // sf::RenderWindow window {}
 
 // sf::Texture snakeHeadTexture {}
