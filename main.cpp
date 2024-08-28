@@ -165,17 +165,29 @@ int main()
   return 0;
 }
 
-// Creating texture objects
-sf::Texture snakeTexture;
-sf::Texture fruitTexture;
+// // Creating texture objects
+// sf::Texture snakeTexture;
+// sf::Texture fruitTexture;
 
-// Load textures from files
-if (!snakeTexture.loadFromFile("path/to/snake.png")) {
-  // Handle error
-}
-if (!foodTexture.loadFromFile("path/to/food.png")) {
-  // Handle error
-}
+// // Load textures from files
+// if (!snakeTexture.loadFromFile("Head UP.png")) {
+//   throw runtime_error("Can't load picture!");
+// }
+// if (!foodTexture.loadFromFile("Fruit.png")) {
+//   throw runtime_error("Can't load picture!")
+// }
+
+// in main
+//    try
+//  {
+//      MyFunc(256); //cause an exception to throw
+//  }
+
+// catch (invalid_argument& e)
+// {
+//     cerr << e.what() << endl;
+//     return -1;
+// }
 
 // Implement a Simple Rendering Engine with a Graphics Library:
 
