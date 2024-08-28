@@ -1,5 +1,8 @@
+# Compiler
 CXX = g++
 CXXFLAGS = -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+
+# SFML paths
 SFML_INCLUDE = "C:/Users/mayav/Documents/Snake Game/External/SFML/include"
 SFML_LIB = "C:/Users/mayav/Documents/Snake Game/External/SFML/lib"
 
@@ -9,6 +12,7 @@ LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
 PROGRAM_FILES = main.cpp game.cpp
 HEADERS = game.h
 
+.PHONY: all clean
 all: program.exe
 
 program.exe: $(PROGRAM_FILES) $(HEADERS)
