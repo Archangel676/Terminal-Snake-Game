@@ -3,8 +3,8 @@ CXX = g++
 CXXFLAGS = -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
 
 # SFML paths
-SFML_INCLUDE = C:/Users/mayav/Documents/Snake Game/External/SFML/include
-SFML_LIB = C:/Users/mayav/Documents/Snake Game/External/SFML/lib
+SFML_INCLUDE = C:/Users/mayav/Documents/Snake\ Game/External/SFML/include
+SFML_LIB = C:/Users/mayav/Documents/Snake\ Game/External/SFML/lib
 
 # Add SFML include path to compiler flags
 CXXFLAGS += -I$(SFML_INCLUDE)
