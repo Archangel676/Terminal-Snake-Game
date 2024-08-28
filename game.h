@@ -21,8 +21,19 @@ public:
   void run();
 
 private:
-  // char currentPlayer;
-  // char board[3][3];
+  sf::RenderWindow window;
+
+  sf::Texture snakeHeadTexture;
+  sf::Texture snakeBodyTexture;
+  sf::Texture snakeCornerTexture;
+  sf::Texture snakeTailTexture;
+  sf::Texture fruitTexture;
+
+  sf::Sprite snakeHeadSprite;
+  sf::Sprite snakeBodySprite;
+  sf::Sprite snakeCornerTexture;
+  sf::Sprite snakeTailTexture;
+  sf::Sprite fruitSprite;
 };
 
 #endif // GAME_H
