@@ -28,6 +28,7 @@ void Setup()
 void Draw()
 {
   system("cls");
+  cout << endl;
   for (int i = 0; i < width + 1; i++)
     cout << "#";
 
@@ -159,6 +160,7 @@ int main()
     Logic();
     Sleep(100); // Sleep for 100 milliseconds to control the game speed
   }
+  cout << endl;
 
   return 0;
 }
