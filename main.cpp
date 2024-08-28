@@ -169,8 +169,12 @@ void Logic()
 
 int main()
 {
+  std::cout << "Starting main..." << std::endl; // Debugging output
   Game game;
+  std::cout << "After game class instance is created..."
+            << std::endl; // Debugging output
   game.run();
+  std::cout << "After game.run()..." << std::endl; // Debugging output
   return 0;
 }
 

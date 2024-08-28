@@ -35,17 +35,19 @@ Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 
 void Game::run()
 {
+  std::cout << "Before the game logic while loop..."
+            << std::endl; // Debugging output
   while (window.isOpen()) {
     sf::Event event;
     while (window.pollEvent(event)) {
       if (event.type == sf::Event::Closed)
         window.close();
     }
-
+    std::cout << "Running game loop..." << std::endl; // Debugging output
     window.clear();
 
     // Draw out my Sprites
-
+    std::cout << "Drawing sprites..." << std::endl; // Debugging output
     window.draw(snakeHeadSprite);
     window.draw(snakeBodySprite);
     window.draw(snakeCornerSprite);
