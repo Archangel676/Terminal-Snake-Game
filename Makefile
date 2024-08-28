@@ -1,13 +1,36 @@
-all: compile link
+CXX = g++
+CXXFLAGS = -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+SFML_INCLUDE = "C:/Users/mayav/Documents/Snake Game/External/SFML/include"
+SFML_LIB = "C:/Users/mayav/Documents/Snake Game/External/SFML/lib"
 
-compile: 
-	g++ main.cpp -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
+CXXFLAGS += -I$(SFML_INCLUDE)
+LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
 
-link: 
-	g++ main.o -o program -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main   
+PROGRAM_FILES = main.cpp game.cpp
+HEADERS = game.h
 
-clean: 
-	rm -f program *.o
+all: program.exe
+
+program.exe: $(PROGRAM_FILES) $(HEADERS)
+	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
+
+clean:
+	del program.exe
+	del src/*.o
+
+
+#THE ONE THAT WORKED
+# all: compile link
+
+# compile: 
+# 	g++ main.cpp -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
+
+# link: 
+# 	g++ main.o -o program -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main   
+
+# clean: 
+# 	rm -f program *.o
+###########################################################
 
 
 #example Readme.md file for github
