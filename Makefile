@@ -2,7 +2,7 @@
 
 # Compiler
 CXX := g++
-CXXFLAGS := -std=c++17 -I"C:\Users\mayav\Documents\Snake Game\External\SFML\include"  # Added my path to SFML include
+CXXFLAGS := -std=c++17 -I"C:\Users\mayav\Documents\Snake/ Game\External\SFML\include"  # Added my path to SFML include
 
 # Linker
 LDFLAGS := -L"C:/SFML/lib" -lsfml-graphics -lsfml-window -lsfml-system
