@@ -1,37 +1,49 @@
-# Compiler
-CXX = g++
-CXXFLAGS = -g -Wall -Wextra
-CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
-CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+# # Compiler
+# CXX = g++
+# CXXFLAGS = -g -Wall -Wextra
+# CXXFLAGS += -std=c++17 -pedantic -pedantic-errors
+# CXXFLAGS += -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
 
-# List .h files here
-HEADERS =
+all: complie link
 
-# List .cpp files here
-PROGRAM_FILES = main.cpp
+compile: 
+	g++ main.cpp -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
 
+link: 
+	g++ main.o -o program -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main   
 
-# Top of section added to support SFML library  
+clean: 
+	rm -f program *.o
 
-# SFML paths
-SFML_INCLUDE = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/include"
-SFML_LIB = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/lib"
+# OLD makefile:
+# # List .h files here
+# HEADERS =
 
-# Add SFML include path to compiler flags
-CXXFLAGS += -I$(SFML_INCLUDE)
-
-# SFML libraries to link
-LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
-
-# Bottom of section added to support SFML library  
+# # List .cpp files here
+# PROGRAM_FILES = main.cpp
 
 
-.PHONY: all
-all: program.exe
+# # Top of section added to support SFML library  
 
-program.exe: $(PROGRAM_FILES) $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
+# # SFML paths
+# SFML_INCLUDE = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/include"
+# SFML_LIB = "C:/Users/mayav/Documents/Snake\ Game/External/SFML/lib"
 
-.PHONY: clean
-clean:
-	rm -f program.exe
+# # Add SFML include path to compiler flags
+# CXXFLAGS += -I$(SFML_INCLUDE)
+
+# # SFML libraries to link
+# LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
+
+# # Bottom of section added to support SFML library  
+
+
+# .PHONY: all
+# all: program.exe
+
+# program.exe: $(PROGRAM_FILES) $(HEADERS)
+# 	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
+
+# .PHONY: clean
+# clean:
+# 	rm -f program.exe
