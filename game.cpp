@@ -3,7 +3,15 @@
 
 Game::Game(): window(sf::VideoMode(800, 600), "Snake Game")
 {
-  if (!anakeHeadTexture.loadFromFile("Assets/images/nake UP.png"))
+  if (!snakeHeadTexture.loadFromFile("Assets/images/Head UP.png")) {
+    std::cerr << "Error loading the snake head image";
+  }
+  if (!snakeBodyTexture.loadFromFile("Assets/images/Head UP.png")) {
+    std::cerr << "Error loading the snake head image";
+  }
+  if (!snakeHeadTexture.loadFromFile("Assets/images/Head UP.png")) {
+    std::cerr << "Error loading the snake head image";
+  }
 }
 
 // sf::RenderWindow window {}
