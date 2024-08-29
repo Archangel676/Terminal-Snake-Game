@@ -1,14 +1,16 @@
 all: compile link
 
+# Compile all .cpp files into object files
 compile: 
-	g++ main.cpp game.cpp game.h -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
+	g++ -c main.cpp game.cpp -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
 
+# Link object files into the final executable
 link: 
-	g++ main.o -o program -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main   
+	g++ main.o game.o -o program -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main   
 
+# Clean up generated files
 clean: 
 	rm -f program *.o
-
 
 #THE ONE THAT WORKED
 # all: compile link
