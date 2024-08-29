@@ -1,26 +1,13 @@
-# Compiler
-CXX = g++
-CXXFLAGS = -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion
+all: compile link
 
-# SFML paths
-SFML_INCLUDE = "C:/Users/mayav/Documents/Snake Game/External/SFML/include"
-SFML_LIB = "C:/Users/mayav/Documents/Snake Game/External/SFML/lib"
+compile: 
+	g++ main.cpp game.cpp game.h -g -Wall -Wextra -std=c++17 -pedantic -pedantic-errors -Wfloat-equal -Wredundant-decls -Wshadow -Wconversion -I"C:/Users/mayav/Documents/Snake Game/External/SFML/include" 
 
-CXXFLAGS += -I$(SFML_INCLUDE)
-LDFLAGS = -L$(SFML_LIB) -lsfml-graphics -lsfml-window -lsfml-system
+link: 
+	g++ main.o -o program -L"C:\Users\mayav\Documents\Snake Game\External\SFML\lib" -lsfml-graphics-s -lsfml-window-s -lsfml-system-s -lopengl32 -lfreetype -lgdi32 -lwinmm -lsfml-main   
 
-PROGRAM_FILES = main.cpp game.cpp
-HEADERS = game.h
-
-.PHONY: all clean
-all: program.exe
-
-program.exe: $(PROGRAM_FILES) $(HEADERS)
-	$(CXX) $(CXXFLAGS) $(PROGRAM_FILES) -o $@ $(LDFLAGS)
-
-clean:
-	rm -f program.exe
-	rm -f *.o
+clean: 
+	rm -f program *.o
 
 
 #THE ONE THAT WORKED
