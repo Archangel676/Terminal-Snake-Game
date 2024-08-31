@@ -122,11 +122,11 @@ void Logic()
     break;
   }
 
-  // //Classic Mode: You die if you hit the wall
+  // //Uncomment for Classic Mode: You die if you hit the wall
   //   if (headX >= (width - 1) || headX < 0 || headY >= height || headY < 0)
   //     gameOver = true;
 
-  // Easy Mode: If you hit the wall you come out the opposite wall
+  // //Default is Easy Mode: If you hit the wall you come out the opposite wall
   if (headX >= width - 1)
     headX = 0;
   else if (headX < 0)
