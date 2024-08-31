@@ -1,6 +1,3 @@
-#include "game.h"
-#include <SFML/Graphics.hpp>
-#include <SFML/Window.hpp>
 #include <conio.h> // For _kbhit() and _getch()
 #include <iostream>
 #include <windows.h> // For Sleep function
@@ -129,7 +126,7 @@ void Logic()
   //   if (headX >= (width - 1) || headX < 0 || headY >= height || headY < 0)
   //     gameOver = true;
 
-  // Easy Mode: You come out the opposite wall if you hit the wall
+  // Easy Mode: If you hit the wall you come out the opposite wall
   if (headX >= width - 1)
     headX = 0;
   else if (headX < 0)
@@ -153,135 +150,16 @@ void Logic()
   }
 }
 
-// int main()
-// {
-//   Setup();
-//   while (!gameOver) {
-//     Draw();
-//     Input();
-//     Logic();
-//     Sleep(100); // Sleep for 100 milliseconds to control the game speed
-//   }
-//   cout << endl;
-
-//   return 0;
-// }
-
 int main()
 {
-  std::cout << "Starting main..." << std::endl; // Debugging output
-  Game game;
-  std::cout << "After game class instance is created..."
-            << std::endl; // Debugging output
-  game.run();
-  std::cout << "After game.run()..." << std::endl; // Debugging output
+  Setup();
+  while (!gameOver) {
+    Draw();
+    Input();
+    Logic();
+    Sleep(100); // Sleep for 100 milliseconds to control the game speed
+  }
+  cout << endl;
+
   return 0;
 }
-
-// // Creating texture objects
-// sf::Texture snakeTexture;
-// sf::Texture fruitTexture;
-
-// // Load textures from files
-// if (!snakeTexture.loadFromFile("Head UP.png")) {
-//   throw runtime_error("Can't load picture!");
-// }
-// if (!foodTexture.loadFromFile("Fruit.png")) {
-//   throw runtime_error("Can't load picture!")
-// }
-
-// in main
-//    try
-//  {
-//      MyFunc(256); //cause an exception to throw
-//  }
-
-// catch (invalid_argument& e)
-// {
-//     cerr << e.what() << endl;
-//     return -1;
-// }
-
-// Implement a Simple Rendering Engine with a Graphics Library:
-
-// // Your Snake Game Logic here...
-
-// void Render(sf::RenderWindow &window) {
-//     // Clear the window with a background color
-//     window.clear(sf::Color::Black);
-
-//     // Create and draw your snake and fruit using SFML Sprites or Shapes
-//     sf::RectangleShape snakeHead(sf::Vector2f(20, 20));
-//     snakeHead.setFillColor(sf::Color::Green);
-//     snakeHead.setPosition(headX * 20, headY * 20);
-//     window.draw(snakeHead);
-
-//     // Continue drawing other game elements...
-
-//     // Display everything on the screen
-//     window.display();
-// }
-
-// int main() {
-//     sf::RenderWindow window(sf::VideoMode(400, 400), "Snake Game");
-//     Setup();
-//     while (window.isOpen() && !gameOver) {
-//         // Handle window events (keyboard, etc.)
-//         sf::Event event;
-//         while (window.pollEvent(event)) {
-//             if (event.type == sf::Event::Closed)
-//                 window.close();
-//         }
-
-//         // Game Logic
-//         Input();
-//         Logic();
-
-//         // Render
-//         Render(window);
-//     }
-
-//     return 0;
-// }
-
-// class Renderer {
-// public:
-//   virtual void RenderSnake(int x, int y) = 0;
-//   virtual void RenderFruit(int x, int y) = 0;
-//   virtual void RenderBoard(int width, int height) = 0;
-//   virtual ~Renderer()
-//   {
-//   }
-// };
-
-// class TextRenderer: public Renderer {
-// public:
-//   void RenderSnake(int x, int y) override
-//   {
-//     // Fill in the text-based rendering code
-//   }
-//   void RenderFruit(int x, int y) override
-//   {
-//     // Fill in the text-based rendering code
-//   }
-//   void RenderBoard(int width, int height) override
-//   {
-//     // Fill in the text-based rendering code
-//   }
-// };
-
-// class ImageRenderer: public Renderer {
-// public:
-//   void RenderSnake(int x, int y) override
-//   {
-//     // Fill in the image-based rendering code
-//   }
-//   void RenderFruit(int x, int y) override
-//   {
-//     // Fill in the image-based rendering code
-//   }
-//   void RenderBoard(int width, int height) override
-//   {
-//     // Fill in the image-based rendering code
-//   }
-// };
