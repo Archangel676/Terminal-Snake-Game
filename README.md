@@ -9,22 +9,21 @@ This repository contains a simple Snake game created for educational purposes.
 
 Use the awds keys to move the snake around the screen, eating apples.
 
-Controls:
-a: The snake will move left
-w: The snake will move up
-d: The snake will move right
-s: The snake will move down
-
-x: End and exit the game
+### Controls:
+- a: The snake will move left
+- w: The snake will move up
+- d: The snake will move right
+- s: The snake will move down
+- x: End and exit the game
 
 Each apple that you eat will increase your score by ten and the snake's size by one length.
 - The apple will reapear somewhere new after being eaten
 - Your current score is displayed at the bottom of the screen
 
-Goal:
+### Goal:
 The goal of the game is to grow your snake as long as possible by eating apples without running into the walls or the snake's tail. 
 
-Options: 
+### Options: 
 - The game's default is Easy Mode: If you hit the wall you come out the opposite wall
 - Otherwise uncomment the Classic Mode for harder gameplay: You die if you hit the wall
 
@@ -47,12 +46,12 @@ The boilerplate starter code (Makefile, .vscode, .clang-format, and .gitignore) 
 
 #The assets including all pixel art is my own original art
 
-## Dependencies
+## Prerequisites to Play
 
-SFML Library (Simple and Fast Multimedia Library): Make SFML is properly installed and configured in your project. 
+SFML Library (Simple and Fast Multimedia Library): Ensure SFML is properly installed and configured in your project. 
 - You can find more details on SFML installation in their official documentation.
 
-# How to Play
+## How to Play
 - Clone this repository to your local machine.
 - Open the project in Microsoft Visual Studio Code.
 - Make sure SFML is properly linked and configured in your project settings.
