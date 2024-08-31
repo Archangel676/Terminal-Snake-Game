@@ -41,10 +41,9 @@ The purpose of this project is to practice and understand game development conce
 
 The boilerplate starter code (Makefile, .vscode, .clang-format, and .gitignore) is from the VSCodeTemplates repository Basic Project template.
 
-#BoostMyTool - SFML Setup in Visual Studio Code | Create C/C++ Applications using SFML + VSCode + MinGW-w64
-#NVitanovic - C++ Tutorial - Simple Snake Game (Parts 1, 2, amd 3)
-
-#The assets including all pixel art is my own original art
+- BoostMyTool - SFML Setup in Visual Studio Code | Create C/C++ Applications using SFML + VSCode + MinGW-w64
+- NVitanovic - C++ Tutorial - Simple Snake Game (Parts 1, 2, amd 3)
+- The assets including all pixel art are my own original work
 
 ## Prerequisites to Play
 
