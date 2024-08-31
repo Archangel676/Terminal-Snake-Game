@@ -1,7 +1,7 @@
-**Description below is the goal. This game is currently a work in progress! Check back later to play :D
+**The description below is the goal. This game is currently a work in progress! Check back later to play :D
 
 # Snake Game (Using C++ and SFML)
-A classic snake game made in C++ with graphics using SFML (Simple and Fast Multimedia Library)which is playable in a PowerShell or terminal window, diplayed using ASCII characters.
+A classic snake game made in C++ with graphics using SFML (Simple and Fast Multimedia Library) which is playable through a pop-up window and is displayed using original pixel art and SFML.
 
 This repository contains a simple Snake game created for educational purposes. 
 
