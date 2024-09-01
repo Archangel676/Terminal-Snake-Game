@@ -1,5 +1,5 @@
 # Terminal Snake Game (Using C++)
-A classic snake game make in C++ which is playable in a PowerShell or terminal window, diplayed using ASCII characters.
+A classic snake game made in C++ which is playable in a PowerShell or terminal window, displayed using ASCII characters.
 
 This repository contains a simple Snake game created for educational purposes. 
 
