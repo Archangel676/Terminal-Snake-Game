@@ -21,8 +21,11 @@ void Setup()
   dir = STOP;
   headX = width / 2;
   headY = height / 2;
-  fruitX = srand(time(0)) % width;
-  fruitY = srand(time(0)) % height;
+
+  srand(static_cast<unsigned int>(time(0)));
+
+  fruitX = rand() % width;
+  fruitY = rand() % height;
   score = 0;
 }
 
