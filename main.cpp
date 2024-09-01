@@ -1,4 +1,5 @@
 #include <conio.h> // For _kbhit() and _getch()
+#include <cstdlib> // for srand and rand
 #include <iostream>
 #include <windows.h> // For Sleep function
 
